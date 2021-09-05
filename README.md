@@ -29,3 +29,9 @@ Using the included prebuilt jar file:
 ```shell script
 java -jar costconverter.jar 0.5 275.50 model1234 inconvenience:none
 ```
+
+## Running tests
+To run the tests:
+```shell script
+./gradlew test
+```

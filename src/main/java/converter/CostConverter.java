@@ -44,6 +44,10 @@ public class CostConverter {
         return calculateCost(timeInMinutes, monetaryCost, activeCostModel);
     }
 
+    public long calculateCost(double timeInMinutes, double monetaryCost, String modelId) {
+        return calculateCost(timeInMinutes, monetaryCost, modelId, null);
+    }
+
     private long calculateCost(double timeInMinutes, double monetaryCost, CostModel costModel) {
         return CostCalculator.calculateTotalCost(timeInMinutes, monetaryCost, costModel);
     }

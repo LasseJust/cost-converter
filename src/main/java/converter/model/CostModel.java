@@ -35,6 +35,10 @@ public class CostModel {
         return timeFactorHourly;
     }
 
+    public CustomCostValue getCustomCostValue(String name) {
+        return customCosts.get(name.toUpperCase());
+    }
+
     public Map<String, CustomCostValue> getCustomCosts() {
         return customCosts;
     }
@@ -47,6 +51,9 @@ public class CostModel {
      * @param value value of the custom cost
      */
     public void updateCustomCosts(String name, CustomCostValue value) {
+        if (value == null) {
+            return;
+        }
         this.customCosts.put(name.toUpperCase(), value);
     }
 
